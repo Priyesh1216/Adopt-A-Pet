@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node.js Function Demo</title>
+</head>
+<body>
+    <h1>Node.js Function Demo</h1>
+    
+    <h2>Find Summation</h2>
+    <form id="findSummationForm" action="/findSummation" method="GET">
+        <label>Enter a positive integer:</label>
+        <input type="number" min="1" name="number" required>
+        <button type="submit">Find Summation</button>
+    </form>
+    <div id="summationResult"></div>
+    
+    <h2>Uppercase First and Last</h2>
+    <form id="uppercaseFirstAndLastForm" action="/uppercaseFirstandLast" method="GET">
+        <label>Enter a string:</label>
+        <input type="text" name="str" required>
+        <button type="submit">Uppercase First and Last</button>
+    </form>
+    <div id="uppercaseResult"></div>
+    
+    <h2>Find Average and Median</h2>
+    <form id="findAverageAndMedianForm" action="/findAverageAndMedian" method="GET">
+        <label>Enter numbers separated by spaces:</label>
+        <input type="text" name="numbers" required>
+        <button type="submit">Find Average and Median</button>
+    </form>
+    <div id="averageMedianResult"></div>
+    
+    <h2>Find 4 Digits</h2>
+    <form id="find4DigitsForm" action="/find4Digits" method="GET">
+        <label>Enter numbers separated by spaces:</label>
+        <input type="text" name="numbersStr" required>
+        <button type="submit">Find 4 Digits</button>
+    </form>
+    <div id="fourDigitsResult"></div>
+
+    <script>
+        // JavaScript to handle form submissions and display results
+        const handleSubmit = async (formId, resultId) => {
+            const form = document.getElementById(formId);
+            form.addEventListener('submit', async (event) => {
+                event.preventDefault();
+                const formData = new FormData(form);
+                const response = await fetch(form.action + '?' + new URLSearchParams(formData).toString());
+                const result = await response.text();
+                document.getElementById(resultId).innerText = result;
+            });
+        };
+
+        handleSubmit('findSummationForm', 'summationResult');
+        handleSubmit('uppercaseFirstAndLastForm', 'uppercaseResult');
+        handleSubmit('findAverageAndMedianForm', 'averageMedianResult');
+        handleSubmit('find4DigitsForm', 'fourDigitsResult');
+    </script>
+</body>
+</html>

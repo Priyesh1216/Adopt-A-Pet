@@ -1,0 +1,16 @@
+2:a:Dog:Less than 18:Male:x:z
+
+2:a:Dog:Less than 18:Male:Other Dogs:Yes:io:
+4:a:Dog:Less than 18:Male:Other Dogs,Other Cats:undefined:we4tg:
+5:a:undefined:Less than 18:undefined:undefined:undefined::
+6:a:undefined:Less than 18:undefined:undefined:undefined::
+7:a:undefined:Less than 18:undefined:undefined:undefined:x:
+8:a:Dog:Less than 18:Male:undefined:undefined::
+9:a:Dog:Less than 18:Male:Other Dogs,Children:a:
+
+
+10:a:Dog:Less than 18:Male:Other Dogs,Children:y:
+13:a:Dog:Less than 18:Male:Other Dogs,No children:x:
+14:a:Dog:Less than 18:Male:Other Dogs,:m:
+15:a:Dog:Less than 18:Male:Other Dogs,on:s:
+16:a:Dog:Less than 18:Male:Other Dogs,Children:q:
